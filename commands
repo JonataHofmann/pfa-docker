@@ -1,0 +1,15 @@
+docker build -t jonatahofmann/pfa-node .
+docker build -t jonatahofmann/pfa-nginx nginx/.
+
+docker run -d -p 3001:3001 --name=nodecontainer -v $(pwd):/usr/src/app jonatahofmann/pfa-node node index.js
+
+
+
+
+docker build -t jonatahofmann/pfa-node .
+docker build -t jonatahofmann/pfa-nginx nginx/.
+
+docker network create pfa
+
+docker run -d --network=pfa --name=nodecontainer -v $(pwd):/usr/src/app jonatahofmann/pfa-node node index.js
+docker run -p 8888:80 --network=pfa jonatahofmann/pfa-nginx

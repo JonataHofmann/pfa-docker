@@ -6,6 +6,6 @@ app.get("/", (req, res) => {
   res.send("PFA Docker!");
 });
 
-app.listen(3000, () => {
-  console.log("Rodando na porta 30000");
+app.listen(3001, () => {
+  console.log("Rodando na porta 3001");
 });
