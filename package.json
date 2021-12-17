@@ -1,0 +1,11 @@
+{
+  "name": "pfa-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JonataHofmann/pfa-docker",
+  "author": "Jonatã Hofmann",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
